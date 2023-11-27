@@ -18,16 +18,16 @@ The primary objective of this project is to develop a predictive model that can 
 ## Approach 
 ---
 ### Data Preprocessing
-Using pandas the data was preprocessed.This step identified the shape of the data,data types,the null values,and converted the numerical variables into categorical variables.
+Using pandas the data was preprocessed. This step identified the shape of the data, data types, and the null values, and converted the numerical variables into categorical variables.
 
 ### Exploratory Data Analysis
 For more accurate processing,
-1. Cnverted the numeric "tenure" coulmn to categorical variable and dropped the coulmns that werent required further .
+1. Converted the numeric "tenure" column to a categorical variable and dropped the columns that weren't required further.
 2. All the categorical variables were converted into dummy variables  for accurate modelling
 3. Churn by monthly charges and total charges were visualised for insights.
-Also identified that the data given is highly imbalanced as the churners are 26.5% and the number of non churners are 73.4%.
+Also identified is that the data given is highly imbalanced as the churners are 26.5% and the number of non-churners is 73.4%.
 
-##### *To solve the imbalanced data problem , used SMOOT-ENN for upscaling of data in every model created*
+##### *To solve the imbalanced data problem, used SMOOT-ENN for upscaling of data in every model created*
 #
 ### Feature Engineering
 Identified that High churn was maximum in case of Month to month contracts, No online security, No Tech support, First year of subscription, and Fibre Optics Internet using the correlation matrix
@@ -60,15 +60,15 @@ The model build using the given data set with *Upscaled data using SMOOT-ENN tec
 | 97.85 | 98.70 | 97.28 | 97.98 |
 
 ### Model Evaluation
-With the original data set , Random Forest and Logistic Regression have almost the same accuracy 
-With the upscaled data, Logistics regression model provides the best accuracy of 97.85% on the testing data, which indicates that it is a very good predictor of churn.
+With the original data set, Random Forest and Logistic Regression have almost the same accuracy 
+With the upscaled data, the Logistics regression model provides the best accuracy of 97.85% on the testing data, which indicates that it is a very good predictor of churn.
 
 ### Result
 According to our analysis, the most important factors related to churn are monthly charges, contract type, and internet service. Customers with high monthly charges and those with month-to-month contracts or no contracts are more likely to churn.
 
 ### Challenges :
-- Handling the imbalanced data ,which was solved eventually with the SMOOT-ENN technique
-- Understanding the ML models that can be used with the data as it contained both categorical variables and Numeric variables
+- Handling the imbalanced data,which was solved eventually with the SMOOT-ENN technique
+- Understanding the ML models that can be used with the data as it contains both categorical variables and Numeric variables
 
 ### Conclusion
 Our analysis recommends offering discounts to high monthly spenders and prioritizing retention efforts for customers with long contracts and high-speed internet. Leveraging a logistic regression model identifies at-risk customers, enabling targeted retention strategies.
